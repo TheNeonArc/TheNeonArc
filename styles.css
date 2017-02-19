@@ -4,4 +4,10 @@ img {
 body {
     text-align: center;
     font-family: arial;
+    color: white;
+}
+div {
+    background-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/989/full/tileable-midnight-blue-grunge-patterns-11.jpg");
+    background-size: 100px 100px;
+    background-repeat: repeat;
 }
