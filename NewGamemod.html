@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Game</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="jquery-3.2.0.js"></script>
+	<script type ="text/javascript" src="script.js"></script>
+	<script>
+		function jelly(n) {
+                var elem = document.getElementById("allblocks");
+                var width = 300;
+                var height = 150;
+                var distancex = 0;
+                var distancey = 150;
+                var dcurrentx = 5;
+                var dpreviousx = 7;
+                var dcurrenty = 10;
+                var dpreviousy = 3;
+                var current;
+                var previous;
+                var current2 = 1;
+                var previous2 = 5;
+                var n;
+                var id = setInterval(jello, 10);
+                function jello() {
+                    if (width == 300)
+                    {
+                        previous = width;
+                        width = width - n;
+                        elem.style.width = width + "px";
+                        current = width;
+                    }
+                    else if (width == 120)
+                    {
+                        previous = width;
+                        width = width + n;
+                        elem.style.width = width + "px";
+                        current = width;
+                    }
+                    else if (previous > current)
+                    {
+                        previous = width;
+                        width = width - n;
+                        elem.style.width = width + "px";
+                        current = width;
+                    }
+                    else if (previous < current)
+                    {
+                        previous = width;
+                        width = width + n;
+                        elem.style.width = width + "px";
+                        current = width;
+                    }
+                    if (height == 300)
+                    {
+                        previous2 = height;
+                        height = height - n;
+                        elem.style.height = height + "px";
+                        current2 = height;
+                    }
+                    else if (height == 120)
+                    {
+                        previous2 = height;
+                        height = height + n;
+                        elem.style.height = height + "px";
+                        current2 = height;
+                    }
+                    else if (previous2 > current2)
+                    {
+                        previous2 = height;
+                        height = height - n;
+                        elem.style.height = height + "px";
+                        current2 = height;
+                    }
+                    else if (previous2 < current2)
+                    {
+                        previous2 = height;
+                        height = height + n;
+                        elem.style.height = height + "px";
+                        current2 = height;
+                    }
+                    if (distancex >= 300)
+                    {
+                        dpreviousx = distancex;
+                        distancex = distancex - n;
+                        elem.style.left = distancex + "px";
+                        dcurrentx = distancex;
+                    }
+                    else if (distancex == 0)
+                    {
+                        dpreviousx = distancex;
+                        distancex = distancex + n;
+                        elem.style.left = distancex + "px";
+                        dcurrentx = distancex;
+                    }
+                    else if (dpreviousx > dcurrentx)
+                    {
+                        dpreviousx = distancex;
+                        distancex = distancex - n;
+                        elem.style.left = distancex + "px";
+                        dcurrentx = distancex;
+                    }
+                    else if (dpreviousx < dcurrentx)
+                    {
+                        dpreviousx = distancex;
+                        distancex = distancex + n;
+                        elem.style.left = distancex + "px";
+                        dcurrentx = distancex;
+                    }
+                    if (distancey >= 300)
+                    {
+                        dpreviousy = distancey;
+                        distancey = distancey - n;
+                        elem.style.top = distancey + "px";
+                        dcurrenty = distancey;
+                    }
+                    else if (distancey == 0)
+                    {
+                        dpreviousy = distancey;
+                        distancey = distancey + n;
+                        elem.style.top = distancey + "px";
+                        dcurrenty = distancey;
+                    }
+                    else if (dpreviousy > dcurrenty)
+                    {
+                        dpreviousy = distancey
+                        distancey = distancey - n;
+                        elem.style.top = distancey + "px";
+                        dcurrenty = distancey;
+                    }
+                    else if (dpreviousy < dcurrenty)
+                    {
+                        dpreviousy = distancey;
+                        distancey = distancey + n;
+                        elem.style.top = distancey + "px";
+                        dcurrenty = distancey;
+                    }
+                }
+            }
+	</script>
+</head>
+<body>
+	<p id ="score">0</p>
+	<p id ="clock">10</p>
+	<div id="allblocks">
+		<div class="box" id = "0">
+		
+		</div>
+		<div class="box" id = "1">
+		
+		</div>
+		<div class="box" id = "2">
+		
+		</div>
+		<br>
+		<div class="box" id = "3">
+			
+		</div>
+		<div class="box" id = "4">
+			
+		</div>
+		<div class="box" id = "5">
+			
+		</div>
+		<br>
+		<div class="box" id = "6">
+			
+		</div>
+		<div class="box" id = "7">
+			
+		</div>
+		<div class="box" id = "8">
+			
+		</div>
+	</div>
+</body>
+</html>
